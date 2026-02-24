@@ -136,7 +136,7 @@ const Index = () => {
             ))}
           </div>
           <p className="text-center text-muted-foreground text-sm mt-8">
-            <span className="text-primary font-semibold">4.8</span> out of 5 based on guest reviews
+            <span className="text-primary font-semibold">4.6</span> out of 5 based on 1000+ Google reviews
           </p>
         </div>
       </section>
