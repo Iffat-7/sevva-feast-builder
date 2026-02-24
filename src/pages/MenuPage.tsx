@@ -16,6 +16,15 @@ interface MenuSection {
 
 const menuSections: MenuSection[] = [
   {
+    title: "Signature Dishes",
+    items: [
+      { name: "Plate Malai Boti", price: "PKR 1,699", desc: "Rich, creamy grilled chicken bites" },
+      { name: "Full Arabic Shawaya Chicken", price: "PKR 2,490", desc: "Whole roasted shawaya chicken" },
+      { name: "Sevvas Mutton Joints (2 joints)", price: "PKR 2,995" },
+      { name: "Sevva Kuna Pot", price: "PKR 2,995" },
+    ],
+  },
+  {
     title: "Sevva's Tawa Special",
     items: [
       { name: "Tawa Chicken", price: "PKR 950" },
@@ -37,8 +46,38 @@ const menuSections: MenuSection[] = [
   {
     title: "Karahi Section",
     items: [
-      { name: "Half Karahi", price: "PKR 1,300" },
-      { name: "Full Karahi", price: "PKR 2,500" },
+      { name: "Half Chicken Karahi (½ kg)", price: "PKR 1,300" },
+      { name: "Full Chicken Karahi", price: "PKR 2,500" },
+      { name: "Mutton Karahi", price: "PKR 2,500" },
+      { name: "Boneless Karahi", price: "PKR 2,500" },
+    ],
+  },
+  {
+    title: "Sevva's Special Sajji",
+    items: [
+      { name: "Chicken Sajji", price: "PKR 1,800", desc: "Slow-roasted whole chicken" },
+      { name: "Lamb Sajji", price: "PKR 3,500", desc: "Slow-roasted whole lamb leg" },
+    ],
+  },
+  {
+    title: "Sevva Mutton Section",
+    items: [
+      { name: "Desi Chicken Shorba (Quarter)", price: "PKR 1,799" },
+      { name: "Mutton Palak", price: "PKR 1,995" },
+      { name: "Mutton Royal Qorma", price: "PKR 2,499" },
+    ],
+  },
+  {
+    title: "Sevva's Special BBQ",
+    items: [
+      { name: "Tikka Boti (12 pcs)", price: "PKR 1,300" },
+      { name: "Chicken Seekh Kabab (4 pcs)", price: "PKR 1,250" },
+      { name: "Beef Seekh Kabab (4 pcs)", price: "PKR 1,399" },
+      { name: "Mutton Kabab (4 pcs)", price: "PKR 1,999" },
+      { name: "Malai Boti (12 pcs)", price: "PKR 1,699" },
+      { name: "Classic Charcoal Chicken", price: "PKR 599" },
+      { name: "Mutton Chops (6 pcs)", price: "PKR 2,999" },
+      { name: "Bosphorus Fish Tikka", price: "PKR 2,499" },
     ],
   },
   {
@@ -55,14 +94,6 @@ const menuSections: MenuSection[] = [
     ],
   },
   {
-    title: "Sevva Mutton Section",
-    items: [
-      { name: "Desi Chicken Shorba (Quarter)", price: "PKR 1,799" },
-      { name: "Mutton Palak", price: "PKR 1,995" },
-      { name: "Mutton Royal Qorma", price: "PKR 2,499" },
-    ],
-  },
-  {
     title: "Appetizers",
     items: [
       { name: "Prawns Tempura (6 pcs)", price: "PKR 2,158" },
@@ -71,21 +102,15 @@ const menuSections: MenuSection[] = [
     ],
   },
   {
-    title: "Rice",
-    items: [{ name: "Mutton Pulao", price: "PKR 1,995" }],
+    title: "Beverages & Mocktails",
+    items: [
+      { name: "Mint Margarita", price: "PKR 250" },
+      { name: "Signature Mocktails", price: "PKR 300–600" },
+    ],
   },
   {
-    title: "Sevva's Special BBQ",
-    items: [
-      { name: "Tikka Boti (12 pcs)", price: "PKR 1,300" },
-      { name: "Chicken Seekh Kabab (4 pcs)", price: "PKR 1,250" },
-      { name: "Beef Seekh Kabab (4 pcs)", price: "PKR 1,399" },
-      { name: "Mutton Kabab (4 pcs)", price: "PKR 1,999" },
-      { name: "Malai Boti (12 pcs)", price: "PKR 1,699" },
-      { name: "Classic Charcoal Chicken", price: "PKR 599" },
-      { name: "Mutton Chops (6 pcs)", price: "PKR 2,999" },
-      { name: "Bosphorus Fish Tikka", price: "PKR 2,499" },
-    ],
+    title: "Rice",
+    items: [{ name: "Mutton Pulao", price: "PKR 1,995" }],
   },
   {
     title: "Signature Platters",
@@ -110,13 +135,6 @@ const menuSections: MenuSection[] = [
       { name: "Garden Fresh Salad", price: "PKR 290" },
       { name: "Mint Raita", price: "PKR 220" },
       { name: "Zeera Raita", price: "PKR 220" },
-    ],
-  },
-  {
-    title: "Sevva's Signature Dishes",
-    items: [
-      { name: "Sevvas Mutton Joints (2 joints)", price: "PKR 2,995" },
-      { name: "Sevva Kuna Pot", price: "PKR 2,995" },
     ],
   },
 ];
@@ -192,6 +210,56 @@ const MenuPage = () => {
                 <h4 className="text-primary font-heading font-semibold mb-3">Desserts</h4>
                 <div className="space-y-2 text-sm text-muted-foreground">
                   <p>Shahi Kheer, Gulab Jamun, Shahi Tukra, Basboussa, Burfi, Rasgulla, and more</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Hi-Tea Buffet */}
+      <section className="py-16 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <div className="bg-card border border-primary/20 rounded-2xl p-8 md:p-12 shadow-gold">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-heading font-bold mb-2">🫖 Hi-Tea Buffet</h2>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div>
+                  <p className="text-xl text-primary font-heading font-bold">PKR 1,875/- + Tax</p>
+                  <p className="text-xs text-muted-foreground">Mon – Thu</p>
+                </div>
+                <div className="hidden sm:block w-px bg-border" />
+                <div>
+                  <p className="text-xl text-primary font-heading font-bold">PKR 2,000/- + Tax</p>
+                  <p className="text-xs text-muted-foreground">Fri – Sun & Holidays</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground mt-3">50+ dishes across Desi, Chinese, Continental & more</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="text-primary font-heading font-semibold mb-3">Desi & Grill Corner</h4>
+                <div className="space-y-2 text-sm text-muted-foreground">
+                  <p>Karahi, handi, BBQ platters, mixed grill, tandoor station</p>
+                </div>
+              </div>
+              <div>
+                <h4 className="text-primary font-heading font-semibold mb-3">Chinese & Continental</h4>
+                <div className="space-y-2 text-sm text-muted-foreground">
+                  <p>Fried rice, chili chicken, cashew chicken, pasta, chowmein</p>
+                </div>
+              </div>
+              <div>
+                <h4 className="text-primary font-heading font-semibold mb-3">Salad Bar & Kids Station</h4>
+                <div className="space-y-2 text-sm text-muted-foreground">
+                  <p>Fresh salads, raita, appetizers, kids-friendly items</p>
+                </div>
+              </div>
+              <div>
+                <h4 className="text-primary font-heading font-semibold mb-3">Desserts & Sweets</h4>
+                <div className="space-y-2 text-sm text-muted-foreground">
+                  <p>Cakes, traditional sweets, ice cream, plated desserts</p>
                 </div>
               </div>
             </div>

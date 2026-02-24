@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Music2 } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -30,6 +30,15 @@ const Footer = () => {
                 aria-label="Facebook"
               >
                 <Facebook size={18} />
+              </a>
+              <a
+                href="https://www.tiktok.com/@sevvarestaurant"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all"
+                aria-label="TikTok"
+              >
+                <Music2 size={18} />
               </a>
             </div>
           </div>
