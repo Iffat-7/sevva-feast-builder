@@ -9,6 +9,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import ChatBot from "./components/ChatBot";
 import Index from "./pages/Index";
 import MenuPage from "./pages/MenuPage";
+import GalleryPage from "./pages/GalleryPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import ReservationsPage from "./pages/ReservationsPage";
@@ -26,6 +27,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/menu" element={<MenuPage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/reservations" element={<ReservationsPage />} />
