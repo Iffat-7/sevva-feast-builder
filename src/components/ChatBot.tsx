@@ -9,6 +9,7 @@ interface Message {
 const INITIAL_MESSAGES: Message[] = [
   {
     role: "bot",
+<<<<<<< HEAD
     content: "Assalam o Alaikum! 🍽️ Sevva Restaurant mein khush aamdeed!\nWelcome to Sevva Restaurant!\n\nMain aap ki madad kar sakta/sakti hoon:\n• 📋 Menu & prices / مینو اور قیمتیں\n• 📞 Reservations / بکنگ\n• 📍 Location & hours / پتہ اور اوقات\n• 🍽️ Buffet info / بفے کی تفصیلات\n• ☕ Deals & offers / ڈیلز\n\nKaise madad kar sakta hoon? How can I help?",
   },
 ];
@@ -104,10 +105,127 @@ const FAQ_RESPONSES: Record<string, string> = {
 
   // Website
   website: "🌐 ویب سائٹ / Website:\n\nhttps://sevva.pk\n\nہماری ویب سائٹ پر آپ دیکھ سکتے ہیں:\n• 📋 مکمل مینو\n• 📸 گیلری\n• 📞 بکنگ\n• 📍 لوکیشن\n\nابھی وزٹ کریں! 😊",
+=======
+    content: "Welcome to Sevva Restaurant! 🍽️\n\nI'm here to help you with:\n• 📋 Menu & prices\n• 📞 Reservations\n• 📍 Location & hours\n• 🍽️ Buffet info\n• ☕ Deals & offers\n\nHow can I help you today?",
+  },
+];
+
+// English keyword mappings
+const ENGLISH_KEYWORDS: Record<string, string> = {
+  "menu": "menu",
+  "food": "menu",
+  "price": "price",
+  "cost": "price",
+  "booking": "reservation",
+  "reservation": "reservation",
+  "table": "reservation",
+  "address": "location",
+  "location": "location",
+  "where": "location",
+  "hours": "hours",
+  "time": "hours",
+  "open": "hours",
+  "close": "hours",
+  "buffet": "buffet",
+  "iftar": "iftar",
+  "suhoor": "suhoor",
+  "hi-tea": "hi-tea",
+  "sajji": "sajji",
+  "deal": "deal",
+  "offer": "deal",
+  "platter": "platter",
+  "coffee": "coffee",
+  "drink": "coffee",
+  "karahi": "karahi",
+  "bbq": "bbq",
+  "tandoor": "tandoor",
+  "handi": "handi",
+  "soup": "soup",
+  "dessert": "dessert",
+  "thank": "thanks",
+  "thanks": "thanks",
+  "hello": "hello",
+  "hi": "hello",
+  "hey": "hello",
+  "ramadan": "ramadan",
+  "about": "about",
+  "social": "social",
+  "event": "event",
+  "payment": "payment",
+  "parking": "parking",
+  "kids": "kids",
+  "delivery": "delivery",
+  "website": "website",
+};
+
+const FAQ_RESPONSES: Record<string, string> = {
+  menu: "📋 Our Menu:\n\n⭐ Signature: Malai Boti (1,699), Shawaya Chicken (2,490)\n🔥 Tawa Special (950–3,299)\n🍲 Desi Handi (1,895–2,245)\n🥘 Karahi (1,300–2,500)\n🍢 BBQ (1,250–2,999)\n🍛 Mutton Specials (1,799–2,499)\n🥘 Turkish/Arabic Platters (2,395–49,995)\n🍽️ Deals (1,545–3,445)\n☕ Coffee & Beverages (145–600)\n🍰 Desserts (350–500)\n\nWant details on any section? 😊",
+
+  price: "💰 Price Ranges:\n\n• Signature: PKR 1,699–2,995\n• Mains: PKR 950–3,299\n• Karahi: PKR 1,300–2,500\n• BBQ: PKR 1,250–2,999\n• Tandoor: PKR 50–1,200\n• Mocktails: PKR 250–600\n• Cold Coffee: PKR 315–495\n• Desserts: PKR 350–500\n• Hi-Tea Buffet: PKR 1,875–2,000 + Tax\n• Iftar Chicken: PKR 2,495 + Tax\n• Iftar Mutton: PKR 3,495 + Tax\n• Suhoor: PKR 2,495 + Tax\n\nPrices may vary. Contact us for updates!",
+
+  reservation: "📞 Reservations:\n\nYou can book in several ways:\n1. 🌐 Visit our website\n2. 📞 Call: +92 315 177 3177\n3. 💬 WhatsApp: +92 315 177 3177\n\n💡 Tip: Book a day ahead for weekends! 😊",
+
+  book: "📞 Reservations:\n\nYou can book in several ways:\n1. 🌐 Visit our website\n2. 📞 Call: +92 315 177 3177\n3. 💬 WhatsApp: +92 315 177 3177\n\n💡 Book ahead for weekends! 😊",
+
+  location: "📍 Our Location:\n\nAdda Plot Roundabout, Raiwind Road,\nopposite GO Pump, near Lake City,\nLahore, Punjab 54790, Pakistan 🇵🇰\n\n⏰ Daily: 12:00 PM – 12:00 AM (Midnight)\n⭐ Google Rating: 4.6/5 (1000+ reviews)\n\n🌐 Website: sevva.pk",
+
+  hours: "⏰ Opening Hours:\n\nMonday – Sunday\n🕐 12:00 PM – 12:00 AM (Midnight)\n\n⚠️ Hours may vary on public holidays.\n\nSpecial hours during Ramadan — Iftar & Suhoor buffets available! 🌙",
+
+  buffet: "🍽️ Buffet Options:\n\n🫖 Hi-Tea (50+ dishes):\n• Mon-Thu: PKR 1,875 + Tax (25% OFF)\n• Fri-Sun: PKR 2,000 + Tax (20% OFF)\n• Slots: 3:00–4:30 PM & 5:00–6:30 PM\n\n🍽️ Iftar Chicken: PKR 2,495/person + Tax\n🍽️ Iftar Mutton: PKR 3,495/person + Tax\n• 2 hours after sunset\n\n🌙 Suhoor: PKR 2,495/person + Tax\n• Slot 1: 1:00 AM – 2:45 AM\n• Slot 2: 3:15 AM – Suhoor ends\n\n📞 Booking: +92 315 177 3177",
+
+  iftar: "🍽️ Iftar Dinner Buffet:\n\n🐔 Chicken Menu: PKR 2,495/person + Tax\nStarters, Chicken Biryani, Spinach, Karahi, Spiced Kabab\nBBQ: Cheese Boti, Tandoori, Tikka, Gola Kabab, Silky Boti\nPan-Asian: Dhaka Chicken, Fried Rice, Manchurian\nTandoor, Dressings, Chutneys, Desserts (17+ items)\n\n🐑 Mutton Menu: PKR 3,495/person + Tax\nRich Curry, Royal Keema Pilaf, Broth Rice\nMutton Spinach Meat, Mutton Kabab, Madrassi Chicken\n+ All Starters, BBQ, Pan-Asian, Desserts\n\n⏰ 2 hours after sunset\n📞 Booking: +92 315 177 3177",
+
+  suhoor: "🌙 Suhoor Buffet:\nPKR 2,495/person + Tax\n\n⏰ Slots:\n• Slot 1: 1:00 AM – 2:45 AM\n• Slot 2: 3:15 AM – Suhoor ends\n\n🥤 Welcome: Sweet Lassi\n🍲 Mains: Mutton Feet, Desi Chicken Broth, Haleem, Spinach, Dal, Lahori Chickpeas\n🍳 Live Egg Station: French Toast, Omelet, Potato & Egg\n🫓 Puri Station: Puri, Puri Bread, Semolina Halwa\n🍢 BBQ: Tandoori Boti, Tikka, Gola Kabab\n🍰 Desserts: Barfi, Rasgulla, Three Milk Cake + more\n\n📞 Booking: +92 315 177 3177",
+
+  "hi-tea": "🫖 Hi-Tea Buffet (50+ dishes):\n\n💰 Prices:\n• Weekday (Mon-Thu): PKR 1,875 + Tax (25% OFF)\n• Weekend (Fri-Sun): PKR 2,000 + Tax (20% OFF)\n• Standard: PKR 2,499 + Tax\n\n⏰ Slots: 3:00–4:30 PM & 5:00–6:30 PM\n\n🍗 Charcoal Grill: Tandoori Boti, Cheese Gola Kabab, Green Options\n🍲 Desi: Shenwari Karahi, Madrassi, Mumbai Spicy Tikka\n🥡 Chinese: Chili Dry, Black Pepper, Chowmein\n🍚 Rice: Sindhi Biryani, Broth Rice, Egg Fried\n🥗 Salad Bar, Naan Shop, Dessert Bar (Chocolate Fountain!)\n\n👶 Children under 7: Half price | Baby Chair: Free\n📞 Booking: +92 315 177 3177",
+
+  sajji: "🍗 Sevva's Special Sajji:\n\n• Chicken Sajji — PKR 1,800\n• Lamb Sajji — PKR 3,500\n\nSlow-roasted to perfection! 🔥\nDine-in available",
+
+  deal: "🍽️ Lunch & Dinner Deals:\n\n• Deal 1 (2-3 people): PKR 3,445\n  Handi + Tandoori Boti (4) + Kabab (2) + Naan + Salad + Raita\n• Deal 5 (2 people): PKR 3,445\n  Leg/Chest + Silky Kabab (2) + Lebanese Boti (4) + Arabic Rice\n• Deal 3 (2-3 people): PKR 3,345\n  Egg Fried Rice + Chinese Gravy + Finger Chicken (8) + Samosa (3)\n• Deal 2 (2 people): PKR 1,795\n  Chicken Biryani + Turkish Kabab (2) + Salad + Mint Raita\n• Deal 4 (2 people): PKR 1,545\n  Chicken Karahi + Roti (3) + Flavored Naan + Raita + Salad\n\n👨‍👩‍👧‍👦 Great for families! 😊",
+
+  platter: "🥘 Turkish & Arabic Platters:\n\n• Full Lamb Mandi: PKR 49,995 (Order 8 hours ahead)\n• Lamb Mandi III (8-10): PKR 24,445\n• Ala Safra (9-10): PKR 21,995\n• Lamb Mandi II (4-5): PKR 10,495\n• Lamb Mandi I (3-4): PKR 8,495\n• Flame Platter (3-4): PKR 6,995\n• Chicken Flame (4-5): PKR 5,995\n• Mandi Platter (2-3): PKR 5,445\n• Ribs Platter (2-3): PKR 5,445\n• 1 Meter Turkish Kabab: PKR 4,495\n• Arabic Shawaya (3-4): PKR 2,395\n\n🎉 Perfect for group dining!",
+
+  coffee: "☕ Coffee & Beverages:\n\n🧊 Cold Coffee:\n• Mocha Honey Bunny: PKR 495\n• Caramel Macchiato / Vanilla Latte / Hazelnut Latte: PKR 445\n• Chocolate Macchiato / Classic Cold / Irish Cream: PKR 315\n\n🔥 Hot Beverages:\n• Hot Chocolate / Caramel / Hazelnut / French Vanilla: PKR 495\n• Cappuccino / Butter Scotch / Irish Cream Latte: PKR 445\n• Latte: PKR 415\n• Turkish Coffee: PKR 210\n• Green Tea: PKR 195\n• Ginger Tea: PKR 190\n• Spiced Tea: PKR 145\n\n🍹 Mocktails:\n• Mint Margarita: PKR 250\n• Signature Mocktails: PKR 300–600",
+
+  karahi: "🥘 Karahi Section:\n\n• Half Chicken Karahi (½ kg): PKR 1,300\n• Full Chicken Karahi: PKR 2,500\n• Mutton Karahi: PKR 2,500\n• Boneless Karahi: PKR 2,500\n\nDelicious traditional Karahi! 🔥",
+
+  bbq: "🍢 BBQ Special:\n\n• Tikka Boti (12 pcs): PKR 1,300\n• Chicken Seekh Kabab (4): PKR 1,250\n• Beef Seekh (4): PKR 1,399\n• Mutton Kabab (4): PKR 1,999\n• Malai Boti (12): PKR 1,699 ⭐\n• Charcoal Chicken: PKR 599\n• Mutton Chop (6): PKR 2,999\n• Fish Tikka: PKR 2,499\n\nCharcoal grilled! 🔥",
+
+  tandoor: "🫓 Tandoor:\n\n• Fermented Roti: PKR 50\n• Nigella Naan: PKR 199\n• Garlic Naan: PKR 199\n• Flavored Naan: PKR 199\n• Spicy Naan: PKR 199\n• Plain Naan: PKR 199\n• Kandhari Naan: PKR 199\n• Chopped Roti: PKR 120\n• Green Spicy Naan: PKR —\n• Pizza Plain Naan: PKR —\n• Chicken Naan: PKR 749\n• Beef Keema Naan: PKR 849\n• Mutton Keema Naan: PKR 1,200\n\nFresh from tandoor! 🔥",
+
+  handi: "🍲 Desi Handi Section:\n\n• Chicken Mogul Supreme: PKR 2,245\n• Chicken Patiala: PKR 2,245\n• Chicken Green Chili Lemon: PKR 2,095\n• Chicken Madrassi: PKR 1,995\n• Chicken Rajasthani: PKR 1,995\n• Chicken Hyderabadi: PKR 1,995\n• Chicken Achari: PKR 1,995\n• Chicken Jalfrezi: PKR 1,995\n• Chicken Green Chili: PKR 1,995\n• Chicken Ginger: PKR 1,995\n• Chicken Handi: PKR 1,895\n\nClay-pot cooked! 😋",
+
+  soup: "🍜 Oriental Soups:\n\n• Sevva Special (H/F): PKR 945/1,645\n• Special Soup (H/F): PKR 945/1,645\n• Sichuan (H/F): PKR 845/1,445\n• Hot & Sour (H/F): PKR 795/1,395\n• Chicken Corn (H/F): PKR 795/1,395\n\nH = Half | F = Full",
+
+  dessert: "🍰 Desserts:\n\n• Gulab Jamun (3 pcs): PKR 350\n• Royal Kheer: PKR 450\n• Carrot Halwa (250g): PKR 500\n\n🎂 More Desserts in Buffet:\nChocolate Fountain, Three Milk Cake, Basboussa, Mousse, Eclairs, Custard, Jelly, Panna Cotta + more! 🍮",
+
+  hello: "Hello! Welcome to Sevva Restaurant! 🍽️\n\nHow can I help you today?\n\nYou can ask me about menu, prices, buffet, booking, location, or anything else! 😊",
+
+  thanks: "Thank you! Much appreciated! 😊\n\nWe look forward to serving you at Sevva!\n\nFeel free to ask anything else!",
+
+  ramadan: "🌙 Ramadan Special!\n\n🍽️ Iftar Chicken: PKR 2,495/person + Tax\n🍽️ Iftar Mutton: PKR 3,495/person + Tax\n🌙 Suhoor: PKR 2,495/person + Tax\n\n⏰ Iftar: 2 hours after sunset\n⏰ Suhoor Slot 1: 1 AM – 2:45 AM\n⏰ Suhoor Slot 2: 3:15 AM – Suhoor ends\n\n📞 Booking: +92 315 177 3177",
+
+  about: "🏢 About Sevva Restaurant:\n\nSevva is a premium desi fine dining restaurant in Lahore.\n\n🍽️ Cuisine: Desi Fusion, Pakistani Classics, Grills, BBQ, Karahi\n📍 Address: Adda Plot, Raiwind Rd, near Lake City, Lahore\n⭐ Google Rating: 4.6/5 (1000+ reviews)\n🎉 Events, Catering, Private Parties\n\n🌐 Website: sevva.pk\n📸 Instagram: @sevvarestaurant\n🎵 TikTok: @sevvarestaurant",
+
+  social: "📱 Social Media:\n\n📸 Instagram: @sevvarestaurant (~4.2K followers)\nFood photos, reels, menu highlights\n\n📘 Facebook: Sevva Restaurant | Lahore\nOffers, buffet promotions, events\n\n🎵 TikTok: @sevvarestaurant\nFood clips and restaurant videos\n\n🌐 Website: sevva.pk",
+
+  event: "🎉 Events & Catering:\n\nAt Sevva, you can host your special occasions:\n• 🎂 Birthday Parties\n• 💍 Wedding Events\n• 🏢 Corporate Events\n• 🎊 Private Parties\n\nBoth terrace and indoor spaces available!\n📞 Booking: +92 315 177 3177",
+
+  payment: "💳 Payment Methods:\n\nAt Sevva, we accept:\n• 💵 Cash\n• 💳 Credit/Debit Card\n\n⚠️ GST (as per PRA regulations) applies to all prices.\nFor latest info, call us!",
+
+  parking: "🅿️ Parking:\n\nSevva Restaurant has ample parking space available.\nEasy access and secure parking!\n\n📍 Adda Plot Roundabout, Raiwind Road, Lahore",
+
+  kids: "👶 For Kids:\n\n• Hi-Tea Buffet: Children under 7 — Half price\n• Baby Chairs — Free!\n• Kids-friendly atmosphere\n\nBring your family! Family-friendly dining! 👨‍👩‍👧‍👦",
+
+  delivery: "🛵 Delivery:\n\nSevva food is also available on Foodpanda!\n\n🍽️ For the best experience, visit us for dine-in! 😊",
+
+  website: "🌐 Website:\n\nhttps://sevva.pk\n\nOn our website you can see:\n• 📋 Complete menu\n��� 📸 Gallery\n• 📞 Booking\n• 📍 Location\n\nVisit now! 😊",
+>>>>>>> 5f63b630cf57af2ad30ee873dffab90f855ed573
 };
 
 // Extended keyword patterns for smarter matching
 const KEYWORD_PATTERNS: Array<{ pattern: RegExp; response: string }> = [
+<<<<<<< HEAD
   // General questions about the restaurant
   { pattern: /\b(what|kya|کیا).*(sevva|restaurant|ریسٹورنٹ)/i, response: "about" },
   { pattern: /\b(tell|bata|بتا).*(about|bare|بارے)/i, response: "about" },
@@ -154,6 +272,33 @@ const KEYWORD_PATTERNS: Array<{ pattern: RegExp; response: string }> = [
   { pattern: /\b(cheap|سستا|budget|بجٹ|affordable)/i, response: "deal" },
   // Expensive/luxury
   { pattern: /\b(expensive|مہنگا|luxury|لگژری)/i, response: "platter" },
+=======
+  { pattern: /\b(what|which).*(sevva|restaurant)/i, response: "about" },
+  { pattern: /\b(tell).*(about)/i, response: "about" },
+  { pattern: /\b(who|whose).*(you|restaurant)/i, response: "about" },
+  { pattern: /\b(open|close|timing|hours|when)/i, response: "hours" },
+  { pattern: /\b(best|popular|recommend|special)/i, response: "menu" },
+  { pattern: /\b(what|which).*(to eat|order|have)/i, response: "menu" },
+  { pattern: /\b(how).*(reach|come|get there)/i, response: "location" },
+  { pattern: /\b(where|address|location)/i, response: "location" },
+  { pattern: /\b(ramadan|fasting|iftar|suhoor)/i, response: "ramadan" },
+  { pattern: /\b(family|group|party)/i, response: "deal" },
+  { pattern: /\b(event|wedding|birthday|celebration|catering)/i, response: "event" },
+  { pattern: /\b(pay|payment|card|cash)/i, response: "payment" },
+  { pattern: /\b(park|parking|car)/i, response: "parking" },
+  { pattern: /\b(kid|child|baby)\b/i, response: "kids" },
+  { pattern: /\b(deliver|delivery|home)/i, response: "delivery" },
+  { pattern: /\b(instagram|facebook|tiktok|social|media)/i, response: "social" },
+  { pattern: /\b(site|web|online)/i, response: "website" },
+  { pattern: /\b(biryani)/i, response: "menu" },
+  { pattern: /\b(chicken|poultry)/i, response: "menu" },
+  { pattern: /\b(mutton|lamb|meat)/i, response: "menu" },
+  { pattern: /\b(drink|beverage|juice|tea|coffee)/i, response: "coffee" },
+  { pattern: /\b(chinese|asian)/i, response: "menu" },
+  { pattern: /\b(rice)/i, response: "menu" },
+  { pattern: /\b(cheap|affordable|budget)/i, response: "deal" },
+  { pattern: /\b(expensive|luxury|premium)/i, response: "platter" },
+>>>>>>> 5f63b630cf57af2ad30ee873dffab90f855ed573
 ];
 
 const ChatBot = () => {
@@ -169,6 +314,7 @@ const ChatBot = () => {
   const getResponse = (userMsg: string): string => {
     const lower = userMsg.toLowerCase();
 
+<<<<<<< HEAD
     // Common greetings (check first for natural feel)
     if (/^(hi|hey|hello|assalam|salam|aoa|hlo)\b/i.test(lower) || /^(السلام|سلام|ہیلو|ہائے)/.test(userMsg)) {
       return FAQ_RESPONSES.hello;
@@ -196,12 +342,41 @@ const ChatBot = () => {
     // Check extended regex patterns for general/contextual questions
     for (const { pattern, response } of KEYWORD_PATTERNS) {
       if (pattern.test(lower) || pattern.test(userMsg)) {
+=======
+    // Common greetings
+    if (/\b(hi|hey|hello|greetings)\b/i.test(lower)) {
+      return FAQ_RESPONSES.hello;
+    }
+    if (/\b(thank|thanks|appreciate)\b/i.test(lower)) {
+      return FAQ_RESPONSES.thanks;
+    }
+    // Goodbye
+    if (/\b(bye|goodbye|farewell|see you)\b/i.test(lower)) {
+      return "Goodbye! 😊 It was great chatting with you!\n\nWe look forward to seeing you at Sevva! 🍽️\n\n📞 +92 315 177 3177";
+    }
+
+    // Check English keywords
+    for (const [englishKey, value] of Object.entries(ENGLISH_KEYWORDS)) {
+      if (lower.includes(englishKey)) {
+        return FAQ_RESPONSES[value] || FAQ_RESPONSES.menu;
+      }
+    }
+
+    // Check extended regex patterns
+    for (const { pattern, response } of KEYWORD_PATTERNS) {
+      if (pattern.test(lower)) {
+>>>>>>> 5f63b630cf57af2ad30ee873dffab90f855ed573
         return FAQ_RESPONSES[response] || FAQ_RESPONSES.menu;
       }
     }
 
+<<<<<<< HEAD
     // Smart fallback — still helpful, never hallucinating
     return "😊 آپ کا سوال ملا! / Got your question!\n\nمیں Sevva Restaurant کا اسسٹنٹ ہوں اور صرف ریسٹورنٹ سے متعلق معلومات دے سکتا ہوں۔\nI'm Sevva's assistant and can help with restaurant-related info only.\n\n🔹 یہ پوچھ کر دیکھیں / Try asking:\n• 📋 \"menu\" یا \"مینو\" — مکمل مینو\n• 💰 \"price\" یا \"قیمت\" — قیمتیں\n• 🍽️ \"buffet\" یا \"بفے\" — بفے آپشنز\n• 🌙 \"iftar\" یا \"افطار\" — رمضان مینو\n• 🫖 \"hi-tea\" — ہائی ٹی بفے\n• 🍽️ \"deals\" یا \"ڈیلز\" — ڈیلز\n• 📍 \"location\" یا \"پتہ\" — ہمارا پتہ\n• 📞 \"reservation\" یا \"بکنگ\" — ٹیبل بکنگ\n• ☕ \"coffee\" یا \"کافی\" — مشروبات\n• 🥘 \"platter\" یا \"پلیٹر\" — پلیٹرز\n\nیا ہمیں کال کریں: 📞 +92 315 177 3177";
+=======
+    // Smart fallback
+    return "Got your question! 😊\n\nI'm Sevva Restaurant's assistant and can help with restaurant-related info.\n\n🔹 Try asking:\n• 📋 \"menu\" — Full menu\n• 💰 \"price\" — Price ranges\n• 🍽️ \"buffet\" — Buffet options\n• 🌙 \"iftar\" — Ramadan menu\n• 🫖 \"hi-tea\" — Hi-Tea buffet\n• 🍽️ \"deals\" — Deals\n• 📍 \"location\" — Address\n• 📞 \"reservation\" — Table booking\n• ☕ \"coffee\" — Drinks\n• 🥘 \"platter\" — Platters\n\nOr call us: 📞 +92 315 177 3177";
+>>>>>>> 5f63b630cf57af2ad30ee873dffab90f855ed573
   };
 
   const handleSend = () => {
@@ -237,7 +412,11 @@ const ChatBot = () => {
             </div>
             <div className="flex-1">
               <h4 className="text-sm font-heading font-bold text-primary-foreground">Sevva Assistant</h4>
+<<<<<<< HEAD
               <p className="text-xs text-primary-foreground/80">🟢 آن لائن | Online</p>
+=======
+              <p className="text-xs text-primary-foreground/80">🟢 Online</p>
+>>>>>>> 5f63b630cf57af2ad30ee873dffab90f855ed573
             </div>
             <button onClick={() => setIsOpen(false)} className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
               <X size={18} />
@@ -294,7 +473,11 @@ const ChatBot = () => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSend()}
+<<<<<<< HEAD
               placeholder="Type or اردو میں لکھیں..."
+=======
+              placeholder="Type your question..."
+>>>>>>> 5f63b630cf57af2ad30ee873dffab90f855ed573
               className="flex-1 bg-muted text-foreground text-sm rounded-xl px-4 py-2.5 outline-none focus:ring-1 focus:ring-primary placeholder:text-muted-foreground"
             />
             <button
