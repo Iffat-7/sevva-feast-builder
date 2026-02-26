@@ -57,18 +57,27 @@ const ReservationsPage = () => {
     const reservationId = actionType === "new" ? generateReservationId() : form.existingId || generateReservationId();
     const now = new Date().toISOString();
 
+    const fullNotes = [
+      form.specialRequests.trim(),
+      `Seating: ${form.seating}`,
+      `Action: ${actionType}`,
+      actionType !== "new" ? `Existing ID: ${form.existingId}` : "",
+    ].filter(Boolean).join(" | ");
+
+    // Payload mapped to Zapier columns A–L
     const payload = {
-      reservation_id: reservationId, customer_name: form.name.trim(), phone: form.phone.trim(),
-      email: form.email.trim() || "", reservation_date: form.date, reservation_time: form.time,
-      guest_count: form.guests, seating_preference: form.seating,
-      special_requests: form.specialRequests.trim(),
-      status: actionType === "cancel" ? "cancelled" : actionType === "update" ? "updated" : "pending",
-      action_source: "website", reservation_type: "dine-in",
-      time_slot_key: form.time?.replace(/[: ]/g, "").toLowerCase() || "",
-      capacity_used: parseInt(form.guests) || 0, table_assigned: "",
-      confirmation_sent: false, confirmation_channel: "pending", handled_by: "website_form",
-      change_reason: actionType !== "new" ? `${actionType} via website` : "",
-      created_at: now, last_updated: now, customer_notes_internal: "", booking_confidence: "high",
+      reservation_id: reservationId,           // A
+      customer_name: form.name.trim(),         // B
+      preferences: form.seating,               // C
+      date: form.date,                         // D
+      time: form.time,                         // E
+      guests: form.guests,                     // F
+      email: form.email.trim() || "",          // G
+      phone: form.phone.trim(),                // H
+      notes: form.specialRequests.trim(),      // I
+      timestamp: now,                          // J
+      theme: actionType === "cancel" ? "cancelled" : actionType === "update" ? "updated" : "new_reservation", // K
+      full_notes: fullNotes,                   // L
     };
 
     try {
