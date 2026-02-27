@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import PageHeader from "@/components/PageHeader";
 import InvitationCard from "@/components/InvitationCard";
 
@@ -81,6 +82,23 @@ const ReservationsPage = () => {
     };
 
     try {
+      // Save to database
+      const { error: dbError } = await supabase.from("reservations").insert({
+        customer_name: form.name.trim(),
+        email: form.email.trim() || null,
+        phone: form.phone.trim(),
+        date: form.date,
+        time: form.time,
+        guests: parseInt(form.guests) || 2,
+        preferences: form.seating,
+        seating: form.seating,
+        notes: form.specialRequests.trim() || null,
+        theme: payload.theme,
+        status: actionType === "cancel" ? "cancelled" : "confirmed",
+      });
+      if (dbError) console.error("DB save error:", dbError);
+
+      // Also send to Zapier
       await fetch(ZAPIER_WEBHOOK, { method: "POST", headers: { "Content-Type": "application/json" }, mode: "no-cors", body: JSON.stringify(payload) });
 
       if (actionType === "new") {
